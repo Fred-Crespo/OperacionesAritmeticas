@@ -4,17 +4,16 @@ def calcular_mcd(a, b):
         a, b = b, a % b
     return a
 
-# Función para solicitar un número positivo mayor que cero
 def solicitar_numero():
     while True:
         try:
-            num = input("Ingrese un número positivo mayor que cero: ")
-            num = int(num)
+            num = int(input("Ingrese un número positivo mayor que cero: "))
             if num <= 0:
-                raise ValueError("El número debe ser positivo y mayor que cero.")
+                raise ValueError
             return num
         except ValueError:
             print("Por favor, ingrese un número entero válido.")
+
 
 # Solicitar entrada de los números al usuario
 num1 = solicitar_numero()
